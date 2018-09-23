@@ -173,9 +173,9 @@ def load_labelmap():
 
 class ObjectDetection(object):
     def __init__(self, detection_graph, category_index, score, expand):
-        self.image_sub = rospy.Subscriber("/camera2/color/image_raw", Image, self.imageCallback, queue_size=10)
-        self.image_pub = rospy.Publisher("/object_detection/image", Image, queue_size=10)
-        self.bbox_pub = rospy.Publisher("/objectinfo", ObjectInfoArray, queue_size=10)
+        self.image_sub = rospy.Subscriber("/image", Image, self.imageCallback, queue_size=10)
+        self.image_pub = rospy.Publisher("/object_image", Image, queue_size=10)
+        self.bbox_pub = rospy.Publisher("/object_info", ObjectInfoArray, queue_size=10)
         self.detection_graph = detection_graph
         self.category_index = category_index
         self.score = score

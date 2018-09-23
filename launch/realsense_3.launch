@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <!--Launch Realsense-->
+    <include file="$(find realsense2_camera)/launch/realsense3.launch"/>
+
+    <!--object detection-->
+    <node pkg="tensorflow_object_detection_tx2" type="tensorflow_object_detection_ros.py" name="tensorflow_object_detection_realsense3" output="screen" >
+        <remap from="/image" to="/camera3/color/image_raw" />
+        <remap from="/object_image" to="/object_image/3" />
+        <remap from="/object_info"  to="/object_info/3" />
+    </node>
+</launch>
