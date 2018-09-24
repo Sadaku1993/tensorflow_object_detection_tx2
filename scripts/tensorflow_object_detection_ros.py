@@ -96,6 +96,7 @@ def load_frozenmodel():
     
     else:
         # load a frozen Model and split it into GPU and CPU graphs
+        # need to add gpu_options 
         input_graph = tf.Graph()
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = allow_memory_growth
