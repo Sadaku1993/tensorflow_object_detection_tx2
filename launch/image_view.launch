@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="tensorflow_object_detection_tx2" type="image_view.py" name="image_view0" >
+        <remap from="/image" to="/camera0/color/image_raw/republish" />
+        <remap from="/object_info" to="/object_info/0" />
+        <remap from="/object_detection" to="/object_detection/image0" />
+    </node>
+
+    <node pkg="tensorflow_object_detection_tx2" type="image_view.py" name="image_view1" >
+        <remap from="/image" to="/camera1/color/image_raw/republish" />
+        <remap from="/object_info" to="/object_info/1" />
+        <remap from="/object_detection" to="/object_detection/image1" />
+     </node>
+
+    <node pkg="tensorflow_object_detection_tx2" type="image_view.py" name="image_view2" >
+        <remap from="/image" to="/camera2/color/image_raw/republish" />
+        <remap from="/object_info" to="/object_info/2" />
+        <remap from="/object_detection" to="/object_detection/image2" />
+     </node>
+
+    <node pkg="tensorflow_object_detection_tx2" type="image_view.py" name="image_view3" >
+        <remap from="/image" to="/camera3/color/image_raw/republish" />
+        <remap from="/object_info" to="/object_info/3" />
+        <remap from="/object_detection" to="/object_detection/image3" />
+     </node>
+
+    <node pkg="tensorflow_object_detection_tx2" type="image_view.py" name="image_view4" >
+        <remap from="/image" to="/camera4/color/image_raw/republish" />
+        <remap from="/object_info" to="/object_info/4" />
+        <remap from="/object_detection" to="/object_detection/image4" />
+     </node>
+</launch>
